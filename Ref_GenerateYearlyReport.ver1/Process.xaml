@@ -79,20 +79,28 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="NavigateAndGetDetails.xaml">
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Performer\NavigateAndGetDetails.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InOutArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[in_TransactionItem]</InOutArgument>
+        <InOutArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">
+          <mva:VisualBasicReference x:TypeArguments="ui:QueueItem" ExpressionText="in_TransactionItem" />
+        </InOutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="out_ItemDetails" />
         <InOutArgument x:TypeArguments="x:String" x:Key="io_ShaInput" />
         <InOutArgument x:TypeArguments="ui:Browser" x:Key="io_AactiveBrowser" />
-        <OutArgument x:TypeArguments="x:String" x:Key="Out_TaxId">[TaxId]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Out_TaxId">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="TaxId" />
+        </OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="DownloadMonthlyReport.xaml">
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Performer\DownloadMonthlyReport.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InOutArgument x:TypeArguments="x:String" x:Key="io_TaxId">[TaxId]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="io_TaxId">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="TaxId" />
+        </InOutArgument>
         <OutArgument x:TypeArguments="scg:List(x:String)" x:Key="out_DropDownCollection" />
-        <OutArgument x:TypeArguments="x:String" x:Key="Out_FilePath">[FilePath]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Out_FilePath">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="FilePath" />
+        </OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_1">
@@ -103,17 +111,27 @@
         <InArgument x:TypeArguments="x:String">[Out_FilePath]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="ConsolidateFiles.xaml">
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Performer\ConsolidateFiles.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="io_TaxId">[TaxId]</InArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="io_FilePath">[FilePath]</InOutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="io_TaxId">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TaxId" />
+        </InArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="io_FilePath">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="FilePath" />
+        </InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="TypeInDetailsScreen.xaml">
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Performer\UploadAttachment.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InOutArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem" />
-        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config" />
-        <InArgument x:TypeArguments="x:String" x:Key="In_TaxId" />
+        <InOutArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">
+          <mva:VisualBasicReference x:TypeArguments="ui:QueueItem" ExpressionText="in_TransactionItem" />
+        </InOutArgument>
+        <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
+          <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="In_TaxId">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TaxId" />
+        </InArgument>
         <InOutArgument x:TypeArguments="x:String" x:Key="io_FilePath">
           <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="FilePath" />
         </InOutArgument>
