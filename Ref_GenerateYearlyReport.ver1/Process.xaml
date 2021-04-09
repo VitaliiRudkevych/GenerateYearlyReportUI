@@ -105,12 +105,8 @@
     </Assign>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="ConsolidateFiles.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="io_TaxId">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TaxId" />
-        </InArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="io_FilePath">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="FilePath" />
-        </InOutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="io_TaxId">[TaxId]</InArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="io_FilePath">[FilePath]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="TypeInDetailsScreen.xaml">
@@ -121,6 +117,7 @@
         <InOutArgument x:TypeArguments="x:String" x:Key="io_FilePath">
           <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="FilePath" />
         </InOutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Out_ConfiramtionId" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
