@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1233,1022</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1233,1174</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="44">
@@ -68,10 +68,11 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="376,957" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="376,1109" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="FilePath" />
       <Variable x:TypeArguments="x:String" Name="TaxId" />
+      <Variable x:TypeArguments="x:String" Name="ConfirmationId" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -81,26 +82,18 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Performer\NavigateAndGetDetails.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InOutArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">
-          <mva:VisualBasicReference x:TypeArguments="ui:QueueItem" ExpressionText="in_TransactionItem" />
-        </InOutArgument>
+        <InOutArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[in_TransactionItem]</InOutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="out_ItemDetails" />
         <InOutArgument x:TypeArguments="x:String" x:Key="io_ShaInput" />
         <InOutArgument x:TypeArguments="ui:Browser" x:Key="io_AactiveBrowser" />
-        <OutArgument x:TypeArguments="x:String" x:Key="Out_TaxId">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="TaxId" />
-        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Out_TaxId">[TaxId]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Performer\DownloadMonthlyReport.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InOutArgument x:TypeArguments="x:String" x:Key="io_TaxId">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="TaxId" />
-        </InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="io_TaxId">[TaxId]</InOutArgument>
         <OutArgument x:TypeArguments="scg:List(x:String)" x:Key="out_DropDownCollection" />
-        <OutArgument x:TypeArguments="x:String" x:Key="Out_FilePath">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="FilePath" />
-        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Out_FilePath">[FilePath]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_1">
@@ -113,12 +106,8 @@
     </Assign>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Performer\ConsolidateFiles.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="io_TaxId">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TaxId" />
-        </InArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="io_FilePath">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="FilePath" />
-        </InOutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="io_TaxId">[TaxId]</InArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="io_FilePath">[FilePath]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Performer\UploadAttachment.xaml">
@@ -135,7 +124,16 @@
         <InOutArgument x:TypeArguments="x:String" x:Key="io_FilePath">
           <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="FilePath" />
         </InOutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="Out_ConfiramtionId" />
+        <OutArgument x:TypeArguments="x:String" x:Key="Out_ConfirmationId">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ConfirmationId" />
+        </OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Performer\TypeInDetailsScreen.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InOutArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem" />
+        <InOutArgument x:TypeArguments="ui:Browser" x:Key="io_ActiveBrowser" />
+        <InArgument x:TypeArguments="x:String" x:Key="In_ConfirmationId" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
