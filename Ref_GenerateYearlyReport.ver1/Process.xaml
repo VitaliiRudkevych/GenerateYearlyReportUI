@@ -129,7 +129,9 @@
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem" />
         <InOutArgument x:TypeArguments="ui:Browser" x:Key="io_ActiveBrowser" />
-        <InArgument x:TypeArguments="x:String" x:Key="In_ConfirmationId" />
+        <InArgument x:TypeArguments="x:String" x:Key="In_ConfirmationId">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ConfirmationId" />
+        </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="334,55" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
