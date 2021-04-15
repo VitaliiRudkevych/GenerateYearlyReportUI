@@ -1,10 +1,11 @@
 {
-  "name": "Ref_GenerateYearlyReport.ver1",
-  "description": "Robotic Enterprise Framework-Ref_GenerateYearlyReport.ver1",
+  "name": "ImageTextAutomation_Practice_1",
+  "description": "Transactional Process",
   "main": "Main.xaml",
   "dependencies": {
+    "UiPath.ComputerVision.LocalServer": "[21.2.1-preview]",
     "UiPath.Excel.Activities": "[2.10.2-preview]",
-    "UiPath.Mail.Activities": "[1.10.3-preview]",
+    "UiPath.Mail.Activities": "[1.10.2-preview]",
     "UiPath.System.Activities": "[21.2.1-preview]",
     "UiPath.UIAutomation.Activities": "[21.2.0-preview]"
   },
@@ -12,7 +13,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "21.2.0.0",
-  "projectVersion": "1.0.7",
+  "projectVersion": "1.0.0",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
@@ -37,13 +38,13 @@
       "ignoredFiles": []
     },
     "fileInfoCollection": [],
-    "modernBehavior": false
+    "modernBehavior": true
   },
-  "expressionLanguage": "VisualBasic",
+  "expressionLanguage": "CSharp",
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "52d9b6e2-4047-43d3-a6d7-2fbd4f612613",
+      "uniqueId": "a64c719e-3428-4fc5-b7af-7aa04639b934",
       "input": [],
       "output": []
     }
