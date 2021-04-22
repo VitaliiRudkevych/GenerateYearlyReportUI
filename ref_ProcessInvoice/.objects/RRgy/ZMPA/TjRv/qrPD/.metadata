@@ -1,0 +1,13 @@
+﻿{
+  "Id": "qrPD4Fr1mkeIOARrujkrjA",
+  "Reference": "osb_EC0wDku8k5H0aYhQhA/qrPD4Fr1mkeIOARrujkrjA",
+  "ParentRef": "osb_EC0wDku8k5H0aYhQhA/TjRvKjNpyU2OvYjj5cWk-g",
+  "Name": "Login",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Created": "2021-04-22T12:44:25.1813129Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.2.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-22T12:44:25.1813129Z"
+}

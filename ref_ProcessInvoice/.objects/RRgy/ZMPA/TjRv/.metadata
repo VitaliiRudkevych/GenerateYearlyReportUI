@@ -1,0 +1,15 @@
+﻿{
+  "Id": "TjRvKjNpyU2OvYjj5cWk-g",
+  "Reference": "osb_EC0wDku8k5H0aYhQhA/TjRvKjNpyU2OvYjj5cWk-g",
+  "ParentRef": "osb_EC0wDku8k5H0aYhQhA/ZMPAzqCt_U2E6ZJvwSuD8w",
+  "Name": "AcmeLogin",
+  "Type": "Screen",
+  "Created": "2021-04-22T12:43:13.1319498Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.2.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-04-22T12:43:40.3706426Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=21.2.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

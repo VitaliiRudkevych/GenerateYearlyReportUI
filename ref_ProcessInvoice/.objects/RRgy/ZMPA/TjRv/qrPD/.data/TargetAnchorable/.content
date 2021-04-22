@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://acme-test.uipath.com/login" ContentHash="fp-H9eOt1kumwlc81-Xjfw" DesignTimeRectangle="344, 674, 75, 43" ElementType="Button" FriendlyName="'Login'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' aaname='                             Login                         ' check:text='Login' /&gt;" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Log In' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0gmgH-pk2aUSUwujbkwdo4A</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="47e36fe2066252e2e65ab43b45e9ce56.png" xmlns="">02Bj3C0Gqlkyw9MwpP_vasw</imageRef>
+</TargetAnchorable>
