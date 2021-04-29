@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-16"?>
-<TargetApp Area="0, 0, 0, 0" BrowserType="Edge" ContentHash="4MtAmzm4y0OtyhVb5dgmOg" Selector="&lt;html app='msedge.exe' title='ACME System 1 - Log In'/&gt;" Url="https://acme-test.uipath.com/login" xmlns="http://schemas.uipath.com/workflow/activities/uix">
-  <imageRef attrName="IconBase64" xmlns="">01_LFUeY37kqJQCmdT0Xcpw</imageRef>
-  <imageRef attrName="InformativeScreenshot" originalValue="9cbb4ad8209dece549c5aa2d05b32f4c.png" xmlns="">0TH3spRCYa02HH1eYdy_i6Q</imageRef>
+<TargetApp Area="0, 0, 0, 0" BrowserType="Edge" ContentHash="i2lA2D_Czkef53SDnPwgCg" Selector="&lt;html app='msedge.exe' title='ACME System 1 - Log In'/&gt;" Url="https://acme-test.uipath.com/login" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="IconBase64" xmlns="">0o4YzNcuIZUiMaCrT00R2IA</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="1bcda6ec5f75804e5236d89513f1ecce.png" xmlns="">0Q2WGYv8kRk2jmuIO-ZVttA</imageRef>
 </TargetApp>
